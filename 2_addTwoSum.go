@@ -1,9 +1,5 @@
 package main
 
-type ListNode struct {
-  Val int
-  Next *ListNode
-}
 
 func main() {
 	l1 := []int{5}
@@ -60,31 +56,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	if highVal > 0 {
 		p.Next = &ListNode{Val: highVal}
-	}
-
-	return head
-}
-
-func makeNodeList(nums []int) *ListNode {
-	var head *ListNode
-	var p *ListNode
-
-	head = &ListNode{
-		Val: nums[0],
-	}
-	p = head
-	if len(nums) <= 1 {
-		return head
-	}
-	for idx, num := range nums {
-		if idx == 0 {
-			continue
-		}
-
-		p.Next = &ListNode{
-			Val: num,
-		}
-		p = p.Next
 	}
 
 	return head

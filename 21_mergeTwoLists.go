@@ -5,8 +5,8 @@ func main() {
 }
 
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-	var preHead *ListNode = &ListNode{}
-	var p *ListNode = preHead
+	var preHead = &ListNode{}
+	var p = preHead
 	for l1 != nil && l2 != nil{
 		if l1.Val <= l2.Val{
 			p.Next = l1

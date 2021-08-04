@@ -17,7 +17,6 @@ func convert(s string, numRows int) string {
 	if 2*numRows-1 > len(s) {
 		numCols = len(s)-numRows+1
 	}
-	fmt.Println(numCols)
 
 	var rr = make([][]uint8, numRows)
 	for i := 0;i < numRows;i++ {
